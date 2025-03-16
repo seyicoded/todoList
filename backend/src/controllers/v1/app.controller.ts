@@ -22,6 +22,22 @@ export default class AppController {
     constructor(){
         this.userModel = db.users;
     }
+
+    getListController = async (request: Request, response: Response)=>{
+        const res = await db.lists.findAll({
+            where: {
+                // @ts-ignore
+                userId: request?.user?.id
+            }
+        });
+        return WrapperResponse("success", {
+            message: "Successfully fetched",
+            status: "success",
+            payload: {
+                res
+            }
+        }, response);
+    }
     
     createListController = async (request: Request, response: Response)=>{
         try{

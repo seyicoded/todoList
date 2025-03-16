@@ -5,6 +5,7 @@
 
 #app-content{
     height: 90% !important;
+    overflow: auto;
 }
 
 #app-footer{

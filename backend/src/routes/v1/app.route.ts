@@ -8,6 +8,7 @@ const appController = new AppController();
 const version = "/v1";
 
 export const initAppRoutesV1 = (router: Router) =>{
+    router.get(version+"/list", authMiddleWare, appController.getListController);
     router.post(version+"/list/create", authMiddleWare, appController.createListController);
     router.post(version+"/list/edit/:id", authMiddleWare, appController.editListController);
     router.delete(version+"/list/action/:id", authMiddleWare, appController.deleteListController);
