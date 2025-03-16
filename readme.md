@@ -31,6 +31,8 @@ A video walkthrough of the application is available at the link below:
 
 📹 **Video URL:** [[Video]](https://drive.google.com/file/d/12eZhzZei-Z8BDBeD_ijlIfhp9cbNxCk0/view?usp=sharing)
 
+https://drive.google.com/file/d/12eZhzZei-Z8BDBeD_ijlIfhp9cbNxCk0/view?usp=sharing
+
 ---
 
 After completing these steps, you should be ready to run the application successfully! 🚀
