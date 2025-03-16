@@ -226,6 +226,7 @@ export default class AuthController {
             email: value.email,
             password: hashPassword,
             first_name: value.first_name,
+            last_name: value.last_name,
             username: value.email,
             role: USER_ROLE.USER,
             status: USER_STATUS.ACTIVE,

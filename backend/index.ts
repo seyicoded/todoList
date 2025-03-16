@@ -9,6 +9,7 @@ import http from 'http';
 import morgan from 'morgan';
 import { setSocketIO } from './src/generic/socket.io';
 import runWebSocket from './src/generic/websocket';
+import cors from "cors"
 
 const app: Express = express();
 const port = process.env.PORT || 3000;
@@ -17,6 +18,7 @@ app.use(urlencoded({
     extended: false
 }));
 
+app.use(cors())
 app.use(express.json());
 
 // // init database
