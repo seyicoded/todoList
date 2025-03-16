@@ -1,0 +1,95 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: black;
+}
+
+/* Background for desktop */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f4f4f4;
+}
+
+/* Phone Container */
+.phone-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Phone Box */
+.phone {
+  width: 375px; /* Typical mobile width */
+  height: 700px; /* Simulated mobile height */
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Phone Screen Content */
+.screen {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.screen h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.screen p {
+  font-size: 16px;
+  color: #555;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#content {
+  display: block;
+  height: 80vh;
+}
+
+/* Mobile View - Fullscreen */
+@media (max-width: 768px) {
+  .phone {
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0;
+      box-shadow: none;
+  }
+
+  #content {
+    display: block;
+    height: 95vh;
+  }
+}
+
+h2 {
+  color: black;
+}
