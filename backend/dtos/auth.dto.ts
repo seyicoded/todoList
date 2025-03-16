@@ -3,8 +3,8 @@ import Joi from "joi"
 export const createUserScheme = {
     email: Joi.string().required().label("Email"),
     password: Joi.string().required().label("Password"),
-    f_name: Joi.string().required().label("first name"),
-    l_name: Joi.string().required().label("last name"),
+    first_name: Joi.string().required().label("first name"),
+    last_name: Joi.string().required().label("last name"),
     // phone: Joi.string().required().label("phone"),
     // dob: Joi.string().required().label("dob"),
     // gender: Joi.string().required().label("gender"),

@@ -209,7 +209,6 @@ export default class AuthController {
             where: {
                 [Op.or]: [
                     { email: value.email },
-                    { username: value.username }
                 ]
             }
         });
@@ -227,14 +226,9 @@ export default class AuthController {
             email: value.email,
             password: hashPassword,
             first_name: value.first_name,
-            username: value.username,
-            phone: value.phone,
-            dob: value.dob,
-            gender: value.gender,
-            country: value.country,
+            username: value.email,
             role: USER_ROLE.USER,
             status: USER_STATUS.ACTIVE,
-            refer_by_username: value?.refer_by_username || null
         })
     
     
@@ -279,22 +273,13 @@ export default class AuthController {
             where: {
                 [Op.or]: [
                     { email: value.email },
-                    { username: value.email },
                 ]
             },
-            include: [db.staffrole]
         });
     
         if(!user){
             return WrapperResponse("error", {
                 message: "User doesn't exist",
-                status: "failed"
-            }, response)
-        }
-    
-        if(user.status != USER_STATUS.ACTIVE){
-            return WrapperResponse("error", {
-                message: "User Not Active to Login",
                 status: "failed"
             }, response)
         }
